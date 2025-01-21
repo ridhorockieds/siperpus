@@ -19,10 +19,11 @@ class MainApp extends StatelessWidget {
         initialIndex: 2,
         child: Scaffold(
           appBar: AppBar(
-            backgroundColor: Colors.white,
+            backgroundColor: Colors.blue,
             bottom: const TabBar(
-              indicatorSize: TabBarIndicatorSize.tab,
-              indicatorWeight: 4.0,
+              indicatorSize: TabBarIndicatorSize.label,
+              dividerColor: Colors.white,
+              indicatorWeight: 5.0,
               tabs: [
                 Tab(text: 'Book'),
                 Tab(text: 'Publisher'),
@@ -30,14 +31,15 @@ class MainApp extends StatelessWidget {
                   text: 'Transaction',
                 ),
               ],
-              labelColor: Colors.blue,
-              unselectedLabelColor: Colors.blueGrey,
-              indicatorColor: Colors.blue,
+              labelColor: Colors.white,
+              unselectedLabelColor: Colors.white70,
+              indicatorColor: Colors.white,
               labelStyle: TextStyle(fontWeight: FontWeight.w600),
             ),
             title: Text(
               '${dotenv.env['APP_NAME']}',
-              style: const TextStyle(fontWeight: FontWeight.w700),
+              style: const TextStyle(
+                  fontWeight: FontWeight.w700, color: Colors.white),
             ),
           ),
           body: const TabBarView(

@@ -1,7 +1,5 @@
 class Transaction {
   int id;
-  int bookId;
-  int publisherId;
   int total;
   String createdAt;
   String updatedAt;
@@ -10,8 +8,6 @@ class Transaction {
 
   Transaction({
     required this.id,
-    required this.bookId,
-    required this.publisherId,
     required this.total,
     required this.createdAt,
     required this.updatedAt,
@@ -22,8 +18,6 @@ class Transaction {
   factory Transaction.fromJson(Map<String, dynamic> json) {
     return Transaction(
       id: json['id'],
-      bookId: json['book_id'],
-      publisherId: json['publisher_id'],
       total: json['total'],
       createdAt: json['created_at'],
       updatedAt: json['updated_at'],
@@ -36,7 +30,7 @@ class Transaction {
 class Book {
   int id;
   String title;
-  int price;
+  String price;
   int stock;
   String createdAt;
   String updatedAt;
