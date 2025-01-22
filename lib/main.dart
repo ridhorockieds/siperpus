@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'pages/transaction_page.dart';
 import 'pages/book_page.dart';
+import 'pages/publisher_page.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 void main() async {
@@ -46,9 +47,7 @@ class MainApp extends StatelessWidget {
           body: const TabBarView(
             children: [
               BookPage(),
-              Center(
-                child: Text('Publisher Page'),
-              ),
+              PublisherPage(),
               TransactionPage(),
             ],
           ),
