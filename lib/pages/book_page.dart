@@ -164,7 +164,7 @@ class CardList extends StatelessWidget {
               ),
             ),
             Text(
-              'Judul: ${book.title}',
+              'Title: ${book.title}',
               style: const TextStyle(
                 fontWeight: FontWeight.normal,
               ),
