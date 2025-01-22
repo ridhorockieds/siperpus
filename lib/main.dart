@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'pages/transaction_page.dart';
+import 'pages/book_page.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 void main() async {
@@ -16,7 +17,7 @@ class MainApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: DefaultTabController(
         length: 3,
-        initialIndex: 2,
+        initialIndex: 0,
         child: Scaffold(
           appBar: AppBar(
             backgroundColor: Colors.blue,
@@ -44,9 +45,7 @@ class MainApp extends StatelessWidget {
           ),
           body: const TabBarView(
             children: [
-              Center(
-                child: Text('Book Page'),
-              ),
+              BookPage(),
               Center(
                 child: Text('Publisher Page'),
               ),
