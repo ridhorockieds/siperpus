@@ -82,6 +82,7 @@ class _AddBookFormPageState extends State<AddBookFormPage> {
       appBar: AppBar(
         title: const Text('Add Book'),
         backgroundColor: Colors.blue,
+        foregroundColor: Colors.white,
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -92,7 +93,7 @@ class _AddBookFormPageState extends State<AddBookFormPage> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const Text(
-                  'Judul:',
+                  'Title:',
                   style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                 ),
                 const SizedBox(height: 8),
@@ -105,7 +106,7 @@ class _AddBookFormPageState extends State<AddBookFormPage> {
                   ),
                   validator: (value) {
                     if (value == null || value.isEmpty) {
-                      return 'Judul is required';
+                      return 'Title is required';
                     }
                     return null;
                   },
